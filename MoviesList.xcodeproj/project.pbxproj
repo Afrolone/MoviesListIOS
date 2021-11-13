@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		E97502D4273FA5D10077E9C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97502D3273FA5D10077E9C7 /* AppDelegate.swift */; };
 		E97502D6273FA5D10077E9C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97502D5273FA5D10077E9C7 /* SceneDelegate.swift */; };
-		E97502D8273FA5D10077E9C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97502D7273FA5D10077E9C7 /* ViewController.swift */; };
+		E97502D8273FA5D10077E9C7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97502D7273FA5D10077E9C7 /* LogInViewController.swift */; };
 		E97502DB273FA5D10077E9C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97502D9273FA5D10077E9C7 /* Main.storyboard */; };
 		E97502DD273FA5D50077E9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97502DC273FA5D50077E9C7 /* Assets.xcassets */; };
 		E97502E0273FA5D50077E9C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97502DE273FA5D50077E9C7 /* LaunchScreen.storyboard */; };
+		E97502EE273FAE1E0077E9C7 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97502ED273FAE1E0077E9C7 /* EmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E97502D0273FA5D10077E9C7 /* MoviesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97502D3273FA5D10077E9C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E97502D5273FA5D10077E9C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E97502D7273FA5D10077E9C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E97502D7273FA5D10077E9C7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E97502DA273FA5D10077E9C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E97502DC273FA5D50077E9C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E97502DF273FA5D50077E9C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E97502E1273FA5D50077E9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E97502ED273FAE1E0077E9C7 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmailViewController.swift; path = ../../../EmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				E97502D3273FA5D10077E9C7 /* AppDelegate.swift */,
 				E97502D5273FA5D10077E9C7 /* SceneDelegate.swift */,
-				E97502D7273FA5D10077E9C7 /* ViewController.swift */,
+				E97502D7273FA5D10077E9C7 /* LogInViewController.swift */,
+				E97502ED273FAE1E0077E9C7 /* EmailViewController.swift */,
 				E97502D9273FA5D10077E9C7 /* Main.storyboard */,
 				E97502DC273FA5D50077E9C7 /* Assets.xcassets */,
 				E97502DE273FA5D50077E9C7 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E97502D8273FA5D10077E9C7 /* ViewController.swift in Sources */,
+				E97502D8273FA5D10077E9C7 /* LogInViewController.swift in Sources */,
 				E97502D4273FA5D10077E9C7 /* AppDelegate.swift in Sources */,
 				E97502D6273FA5D10077E9C7 /* SceneDelegate.swift in Sources */,
+				E97502EE273FAE1E0077E9C7 /* EmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
