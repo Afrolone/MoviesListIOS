@@ -29,17 +29,15 @@ class LogInViewController: UIViewController {
         
         if areCredentialsOK(email: email, password: password) {
             emailToBeSent = email
-            performSegue(withIdentifier: "ShowEmailSegue", sender: email)
+            performSegue(withIdentifier: "ShowMovieListSegue", sender: nil)
+            //let moviesListViewController = self.storyboard?.instantiateViewController(identifier: //Constants.Storyboard.moviesListViewController) as? MoviesListViewController
+            
+           // self.view.window?.rootViewController = moviesListViewController
+           // self.view.window?.makeKeyAndVisible()
         }
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is EmailViewController {
-                let vc = segue.destination as? EmailViewController
-                vc?.email = emailToBeSent
-            }
-    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

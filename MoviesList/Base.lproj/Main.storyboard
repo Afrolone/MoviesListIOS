@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W0W-yz-t8M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D2U-PM-1o0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tfW-ZG-Caf">
+            <objects>
+                <navigationController id="D2U-PM-1o0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="28m-b8-kEW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W0W-yz-t8M" kind="relationship" relationship="rootViewController" id="4EN-eA-ruV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9L7-AX-IQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1164" y="54"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="qFz-r0-WaQ">
             <objects>
@@ -17,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8WY-qB-Jnw">
-                                <rect key="frame" x="20" y="64" width="374" height="172"/>
+                                <rect key="frame" x="20" y="108" width="374" height="172"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infinity" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qhJ-Si-keJ">
                                         <rect key="frame" x="0.0" y="4" width="374" height="27.5"/>
@@ -63,48 +79,69 @@
                             <constraint firstItem="8WY-qB-Jnw" firstAttribute="leading" secondItem="7Up-do-S6R" secondAttribute="leading" constant="20" id="qYi-wZ-qPv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Login Screen" id="yvA-8F-2Ef"/>
                     <connections>
                         <outlet property="emailTextField" destination="Dro-Qd-y4m" id="N77-3L-Y6Q"/>
                         <outlet property="passwordTextField" destination="3Zd-Ih-lc8" id="qj1-5H-THx"/>
-                        <segue destination="Uc5-2L-Uqr" kind="show" identifier="ShowEmailSegue" id="8pk-G8-9Ex"/>
+                        <segue destination="zxy-ZL-w8s" kind="show" identifier="ShowMovieListSegue" id="MMJ-6U-2zt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJs-vI-DFU" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-70" y="54"/>
         </scene>
-        <!--Email View Controller-->
-        <scene sceneID="bHd-NJ-l4v">
+        <!--Movies List-->
+        <scene sceneID="2iA-kV-tKB">
             <objects>
-                <viewController id="Uc5-2L-Uqr" userLabel="Email View Controller" customClass="EmailViewController" customModule="MoviesList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="way-tJ-zaO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <tableViewController storyboardIdentifier="MoviesListViewController" id="zxy-ZL-w8s" customClass="MoviesListViewController" customModule="MoviesList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dQZ-9h-8AI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-bM-pPm">
-                                <rect key="frame" x="10" y="10" width="394" height="788"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="hNM-3j-S9P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="7mB-bM-pPm" firstAttribute="leading" secondItem="hNM-3j-S9P" secondAttribute="leading" constant="10" id="Ege-Sk-3ZC"/>
-                            <constraint firstItem="7mB-bM-pPm" firstAttribute="top" secondItem="hNM-3j-S9P" secondAttribute="top" constant="10" id="fkx-Ej-az7"/>
-                            <constraint firstItem="hNM-3j-S9P" firstAttribute="bottom" secondItem="7mB-bM-pPm" secondAttribute="bottom" constant="10" id="oEg-Ol-NLV"/>
-                            <constraint firstItem="hNM-3j-S9P" firstAttribute="trailing" secondItem="7mB-bM-pPm" secondAttribute="trailing" constant="10" id="ruk-gF-xgC"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Bhw-m8-lUs"/>
-                    <connections>
-                        <outlet property="emailLabel" destination="7mB-bM-pPm" id="S1H-1e-QI8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0rh-Th-Jwr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="eix-st-2kZ">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eix-st-2kZ" id="dGX-Bo-dQw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sz6-sn-x5D">
+                                            <rect key="frame" x="0.0" y="-42.5" width="414" height="128.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DYZ-U7-pbh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="43.5" height="128.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHm-t7-Tyd">
+                                                    <rect key="frame" x="53.5" y="39" width="360.5" height="50.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="sz6-sn-x5D" firstAttribute="leading" secondItem="eix-st-2kZ" secondAttribute="leading" id="7gx-zs-oZ4"/>
+                                    <constraint firstItem="sz6-sn-x5D" firstAttribute="centerY" secondItem="eix-st-2kZ" secondAttribute="centerY" id="Bxb-ao-A6s"/>
+                                    <constraint firstItem="DYZ-U7-pbh" firstAttribute="height" secondItem="eix-st-2kZ" secondAttribute="height" multiplier="2.94253" id="SxG-Ra-tdn"/>
+                                    <constraint firstAttribute="trailing" secondItem="sz6-sn-x5D" secondAttribute="trailing" id="tjE-xx-YlW"/>
+                                    <constraint firstItem="DYZ-U7-pbh" firstAttribute="width" secondItem="eix-st-2kZ" secondAttribute="height" multiplier="1:1" id="wiV-PA-Qw3"/>
+                                </constraints>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="zxy-ZL-w8s" id="u1f-Ii-Xqz"/>
+                            <outlet property="delegate" destination="zxy-ZL-w8s" id="Pig-37-37S"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movies List" largeTitleDisplayMode="always" id="XGw-AS-ZBM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjI-qA-4l1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="54"/>
+            <point key="canvasLocation" x="871" y="54"/>
         </scene>
     </scenes>
     <resources>
