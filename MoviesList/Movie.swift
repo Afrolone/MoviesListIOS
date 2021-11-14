@@ -14,6 +14,6 @@ struct Movie {
     let releaseYear: Int
     let shortDesc: String
     let longDesc: String
-    //var image: UIImage = UIImage()!
+    var image: UIImage
 }
 
