@@ -12,16 +12,13 @@ class MovieDetailViewController: UIViewController {
     
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var yearLabel: UILabel!
     @IBOutlet var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = movie.image
-        nameLabel.text = movie.name
-        yearLabel.text = String(movie.releaseYear)
         descriptionTextView.text = movie.longDesc
+        self.title = movie.name
     }
     
     required init?(coder: NSCoder) { fatalError("Some fatal error in MovieDetailViewControler initializer!") }
