@@ -7,21 +7,20 @@
 
 import UIKit
 
-class MovieDetailViewController: UITableViewController {
+class MovieDetailViewController: UIViewController {
     let movie: Movie
     
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
-    //@IBOutlet var yearLabel: UILabel!
+    @IBOutlet var yearLabel: UILabel!
     @IBOutlet var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITableView.appearance().tableHeaderView = .init(frame: .init(x: 0, y: 0, width: 0, height: CGFloat.leastNonzeroMagnitude))
         imageView.image = movie.image
         nameLabel.text = movie.name
-        //yearLabel.text = String(movie.releaseYear)
+        yearLabel.text = String(movie.releaseYear)
         descriptionTextView.text = movie.longDesc
     }
     
