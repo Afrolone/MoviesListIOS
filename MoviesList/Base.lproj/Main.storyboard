@@ -115,32 +115,31 @@
                     <navigationItem key="navigationItem" title="Movie List" id="7cf-Mg-mVM"/>
                     <connections>
                         <outlet property="tableView" destination="khO-2N-aT6" id="PJ9-0i-W2Z"/>
-                        <segue destination="brV-Za-RQv" kind="show" identifier="ShowMovieDetailSegue" destinationCreationSelector="ShowMovieDetailSegue:" id="Tt3-IE-bGl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvC-IF-b7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="846" y="54"/>
         </scene>
-        <!--Movie Detail View Controller-->
+        <!--MovieDetailViewController-->
         <scene sceneID="2Ii-gI-H5K">
             <objects>
-                <viewController id="brV-Za-RQv" customClass="MovieDetailViewController" customModule="MoviesList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailViewController" title="MovieDetailViewController" id="brV-Za-RQv" customClass="MovieDetailViewController" customModule="MoviesList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jfe-TJ-q9Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sY-Y2-jVr">
-                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8sY-Y2-jVr" secondAttribute="height" multiplier="1:1" id="8mI-Sn-M5c"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C58-s9-FTi">
-                                <rect key="frame" x="0.0" y="502" width="414" height="360"/>
+                                <rect key="frame" x="0.0" y="458" width="414" height="404"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZi-2A-v34">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

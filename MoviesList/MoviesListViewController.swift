@@ -6,12 +6,12 @@ class MoviesListViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     
     
-    @IBSegueAction func ShowMovieDetailSegue(_ coder: NSCoder) -> MovieDetailViewController? {
-        guard let indexPath = tableView.indexPathForSelectedRow
-        else { fatalError("Nothing selected!") }
-        let movie = MoviesCollection.movies[indexPath.row]
-        return MovieDetailViewController(coder: coder, movie: movie)
-    }
+//    @IBSegueAction func ShowMovieDetailSegue(_ coder: NSCoder) -> MovieDetailViewController? {
+//        guard let indexPath = tableView.indexPathForSelectedRow
+//        else { fatalError("Nothing selected!") }
+//        let movie = MoviesCollection.movies[indexPath.row]
+//        return MovieDetailViewController() //coder: coder, movie: movie
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,15 @@ class MoviesListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowMovieDetailSegue", sender: nil)
+        //performSegue(withIdentifier: "ShowMovieDetailSegue", sender: nil)
+        let movie = MoviesCollection.movies[indexPath.row]
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+        print("MOVIEEE")
+        print(movie)
+        vc.movie = movie
+        print("VCC")
+        print(vc.movie)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

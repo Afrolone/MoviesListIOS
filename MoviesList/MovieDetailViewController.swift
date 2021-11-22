@@ -8,23 +8,29 @@
 import UIKit
 
 class MovieDetailViewController: UIViewController {
-    let movie: Movie
+    var movie: Movie?
     
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
+        print("VIEWDIDLOAD")
+        print(movie)
+        descriptionTextView.text = self.movie?.longDesc
+        self.title = self.movie?.name
+        imageView.image = self.movie?.image
         super.viewDidLoad()
-        imageView.image = movie.image
-        descriptionTextView.text = movie.longDesc
-        self.title = movie.name
+        
     }
     
-    required init?(coder: NSCoder) { fatalError("Some fatal error in MovieDetailViewControler initializer!") }
     
-    init?(coder: NSCoder, movie: Movie) {
-        self.movie = movie
-        super.init(coder: coder)
-    }
+    
+//    required init?(coder: NSCoder) { fatalError("Some fatal error in MovieDetailViewControler initializer!") }
+//
+//    init?(coder: NSCoder, movie: Movie) {
+//        self.movie = movie
+//        super.init(coder: coder)
+//    }
+    
 }
