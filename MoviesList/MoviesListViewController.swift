@@ -1,7 +1,10 @@
 
 import UIKit
 
-class MoviesListViewController: UITableViewController {
+class MoviesListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     @IBSegueAction func ShowMovieDetailSegue(_ coder: NSCoder) -> MovieDetailViewController? {
         guard let indexPath = tableView.indexPathForSelectedRow
@@ -9,28 +12,25 @@ class MoviesListViewController: UITableViewController {
         let movie = MoviesCollection.movies[indexPath.row]
         return MovieDetailViewController(coder: coder, movie: movie)
     }
-    //@IBSegueAction func ShowMovieDetailSegue(_ coder: NSCoder) -> UIViewController? {
-        
-    //}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         
         let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        tableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
             
-        self.registerTableViewCells()
+        registerTableViewCells()
         
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         MoviesCollection.movies.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell
         //if let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as? MovieTableViewCell {
           //      return cell
@@ -62,11 +62,11 @@ class MoviesListViewController: UITableViewController {
     private func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "CustomTableViewCell",
                                   bundle: nil)
-        self.tableView.register(textFieldCell,
+        tableView.register(textFieldCell,
                                 forCellReuseIdentifier: "CustomTableViewCell")
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ShowMovieDetailSegue", sender: nil)
     }
 }

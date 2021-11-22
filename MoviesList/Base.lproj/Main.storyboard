@@ -83,35 +83,44 @@
                     <connections>
                         <outlet property="emailTextField" destination="Dro-Qd-y4m" id="N77-3L-Y6Q"/>
                         <outlet property="passwordTextField" destination="3Zd-Ih-lc8" id="qj1-5H-THx"/>
-                        <segue destination="zxy-ZL-w8s" kind="show" identifier="ShowMovieListSegue" id="MMJ-6U-2zt"/>
+                        <segue destination="iQP-pc-NWt" kind="show" identifier="ShowMovieListSegue" id="RHr-CL-TFX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJs-vI-DFU" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-70" y="54"/>
         </scene>
-        <!--Movies List-->
-        <scene sceneID="2iA-kV-tKB">
+        <!--Movie List-->
+        <scene sceneID="jwW-JF-ZTy">
             <objects>
-                <tableViewController storyboardIdentifier="MoviesListViewController" id="zxy-ZL-w8s" customClass="MoviesListViewController" customModule="MoviesList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dQZ-9h-8AI">
+                <viewController id="iQP-pc-NWt" customClass="MoviesListViewController" customModule="MoviesList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1h-pY-Diq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="khO-2N-aT6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zyl-Ki-M5v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="zxy-ZL-w8s" id="u1f-Ii-Xqz"/>
-                            <outlet property="delegate" destination="zxy-ZL-w8s" id="Pig-37-37S"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Movies List" largeTitleDisplayMode="always" id="XGw-AS-ZBM"/>
+                        <constraints>
+                            <constraint firstItem="Zyl-Ki-M5v" firstAttribute="trailing" secondItem="khO-2N-aT6" secondAttribute="trailing" id="a93-ZL-4iF"/>
+                            <constraint firstItem="khO-2N-aT6" firstAttribute="top" secondItem="Zyl-Ki-M5v" secondAttribute="top" id="hqo-tr-dwZ"/>
+                            <constraint firstItem="khO-2N-aT6" firstAttribute="leading" secondItem="Zyl-Ki-M5v" secondAttribute="leading" id="nqC-vg-JEk"/>
+                            <constraint firstItem="Zyl-Ki-M5v" firstAttribute="bottom" secondItem="khO-2N-aT6" secondAttribute="bottom" id="vqi-iC-tTK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movie List" id="7cf-Mg-mVM"/>
                     <connections>
-                        <segue destination="brV-Za-RQv" kind="show" identifier="ShowMovieDetailSegue" destinationCreationSelector="ShowMovieDetailSegue:" id="MU9-Rq-Y1t"/>
+                        <outlet property="tableView" destination="khO-2N-aT6" id="PJ9-0i-W2Z"/>
+                        <segue destination="brV-Za-RQv" kind="show" identifier="ShowMovieDetailSegue" destinationCreationSelector="ShowMovieDetailSegue:" id="Tt3-IE-bGl"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xjI-qA-4l1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OvC-IF-b7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="54"/>
+            <point key="canvasLocation" x="846" y="54"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="2Ii-gI-H5K">
