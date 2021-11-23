@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90FE62E274CEA6900B6F231 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FE62D274CEA6900B6F231 /* Utils.swift */; };
 		E91EA24127425E700022EC97 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91EA24027425E700022EC97 /* MoviesListViewController.swift */; };
 		E927651B2743BF62006794E1 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92765192743BF62006794E1 /* MovieTableViewCell.swift */; };
 		E927651C2743BF62006794E1 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E927651A2743BF62006794E1 /* MovieTableViewCell.xib */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90FE62D274CEA6900B6F231 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E91EA24027425E700022EC97 /* MoviesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		E92765192743BF62006794E1 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		E927651A2743BF62006794E1 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				E97502D3273FA5D10077E9C7 /* AppDelegate.swift */,
 				E97502D5273FA5D10077E9C7 /* SceneDelegate.swift */,
 				E97502D7273FA5D10077E9C7 /* LogInViewController.swift */,
+				E90FE62D274CEA6900B6F231 /* Utils.swift */,
 				E97502F3273FEF2B0077E9C7 /* Constants.swift */,
 				E97502EF273FC1B40077E9C7 /* Movie.swift */,
 				E97502F1273FCC8D0077E9C7 /* MoviesCollection.swift */,
@@ -165,6 +168,7 @@
 				E97502D4273FA5D10077E9C7 /* AppDelegate.swift in Sources */,
 				E97502D6273FA5D10077E9C7 /* SceneDelegate.swift in Sources */,
 				E97502F4273FEF2B0077E9C7 /* Constants.swift in Sources */,
+				E90FE62E274CEA6900B6F231 /* Utils.swift in Sources */,
 				E97502F2273FCC8D0077E9C7 /* MoviesCollection.swift in Sources */,
 				E91EA24127425E700022EC97 /* MoviesListViewController.swift in Sources */,
 				E9670524274122FF006B8E27 /* MovieDetailViewController.swift in Sources */,

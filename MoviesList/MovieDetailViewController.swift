@@ -15,22 +15,14 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
-        print("VIEWDIDLOAD")
-        print(movie)
+        setTheView()
+        super.viewDidLoad()
+    }
+    
+    fileprivate func setTheView() {
         descriptionTextView.text = self.movie?.longDesc
         self.title = self.movie?.name
         imageView.image = self.movie?.image
-        super.viewDidLoad()
-        
     }
-    
-    
-    
-//    required init?(coder: NSCoder) { fatalError("Some fatal error in MovieDetailViewControler initializer!") }
-//
-//    init?(coder: NSCoder, movie: Movie) {
-//        self.movie = movie
-//        super.init(coder: coder)
-//    }
-    
+
 }

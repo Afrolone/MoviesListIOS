@@ -10,10 +10,7 @@ import Foundation
 struct Constants {
     
     struct Storyboard {
-        
-        //static let moviesListViewController = "MoviesListViewController"
-        
-    }
-    
-    
+        static let moviesListViewController = "MoviesListViewController"
+        static let movieDetailViewController = "MovieDetailViewController"
+    }    
 }
